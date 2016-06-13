@@ -318,7 +318,7 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
 
     MBBackgroundView *bezelView = [MBBackgroundView new];
     bezelView.translatesAutoresizingMaskIntoConstraints = NO;
-    bezelView.layer.cornerRadius = 0.f;
+    bezelView.layer.cornerRadius = 5.f;
     bezelView.alpha = 0.f;
     [self addSubview:bezelView];
     _bezelView = bezelView;
@@ -805,7 +805,7 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
 
     if (_annular) {
         // Draw background
-		 CGFloat lineWidth = 1.f;
+        CGFloat lineWidth = isPreiOS7 ? 5.f : 1.f;
         UIBezierPath *processBackgroundPath = [UIBezierPath bezierPath];
         processBackgroundPath.lineWidth = lineWidth;
         processBackgroundPath.lineCapStyle = kCGLineCapButt;
@@ -826,7 +826,7 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
         [processPath stroke];
     } else {
         // Draw background
-        CGFloat lineWidth = 1.f;
+        CGFloat lineWidth = 2.f;
         CGRect allRect = self.bounds;
         CGRect circleRect = CGRectInset(allRect, lineWidth/2.f, lineWidth/2.f);
         CGPoint center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
@@ -924,7 +924,7 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
 - (void)drawRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    CGContextSetLineWidth(context, 1);
+    CGContextSetLineWidth(context, 2);
     CGContextSetStrokeColorWithColor(context,[_lineColor CGColor]);
     CGContextSetFillColorWithColor(context, [_progressRemainingColor CGColor]);
     
