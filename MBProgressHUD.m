@@ -318,7 +318,7 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
 
     MBBackgroundView *bezelView = [MBBackgroundView new];
     bezelView.translatesAutoresizingMaskIntoConstraints = NO;
-    bezelView.layer.cornerRadius = 5.f;
+    bezelView.layer.cornerRadius = 0.f;
     bezelView.alpha = 0.f;
     [self addSubview:bezelView];
     _bezelView = bezelView;
@@ -924,7 +924,7 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
 - (void)drawRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    CGContextSetLineWidth(context, 2);
+    CGContextSetLineWidth(context, 1);
     CGContextSetStrokeColorWithColor(context,[_lineColor CGColor]);
     CGContextSetFillColorWithColor(context, [_progressRemainingColor CGColor]);
     
