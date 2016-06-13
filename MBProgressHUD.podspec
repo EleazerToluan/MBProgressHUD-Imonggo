@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "MBProgressHUD"
+  s.name         = "MBProgressHUD-Imonggo"
   s.version      = "0.9.2"
   s.summary      = "An iOS activity indicator view."
   s.description  = <<-DESC
