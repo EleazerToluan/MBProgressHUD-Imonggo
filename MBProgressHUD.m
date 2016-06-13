@@ -805,7 +805,7 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
 
     if (_annular) {
         // Draw background
-        CGFloat lineWidth = isPreiOS7 ? 5.f : 2.f;
+		 CGFloat lineWidth = 1.f;
         UIBezierPath *processBackgroundPath = [UIBezierPath bezierPath];
         processBackgroundPath.lineWidth = lineWidth;
         processBackgroundPath.lineCapStyle = kCGLineCapButt;
@@ -826,7 +826,7 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
         [processPath stroke];
     } else {
         // Draw background
-        CGFloat lineWidth = 2.f;
+        CGFloat lineWidth = 1.f;
         CGRect allRect = self.bounds;
         CGRect circleRect = CGRectInset(allRect, lineWidth/2.f, lineWidth/2.f);
         CGPoint center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
