@@ -1364,14 +1364,14 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
     self.layer.cornerRadius = ceil(height / 2.f);
 }
 
-//- (CGSize)intrinsicContentSize {
+- (CGSize)intrinsicContentSize {
 //    // Only show if we have associated control events
 //    if (self.allControlEvents == 0) return CGSizeZero;
 //    CGSize size = [super intrinsicContentSize];
 //    // Add some side padding
 //    size.width += 20.f;
-//    return size;
-//}
+   return CGSizeZero;
+}
 
 #pragma mark - Color
 
